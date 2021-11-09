@@ -1,3 +1,279 @@
+@font-face {
+  font-family: Open Sans, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+html {
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+.top {
+  height: 100vh;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+picture {
+  display: block;
+  line-height: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+figure canvas {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+a.no-pointer {
+  cursor: initial;
+}
+a:visited {
+  color: #ffffff;
+}
+
+figure {
+  margin: 0;
+}
+figure.border img {
+  box-sizing: border-box;
+}
+
+video {
+  max-width: 100%;
+}
+
+::selection {
+  background: #4434FF;
+  color: #ffffff;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+ul li,
+ol li {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+}
+
+dd {
+  margin-left: 0;
+}
+
+sup {
+  top: -0.3em;
+}
+
+#app {
+  margin-left: 322px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  padding-top: 32px;
+}
+nav img {
+  width: 74px;
+  height: 74px;
+}
+nav ul {
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.032em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+}
+nav ul li {
+  padding-left: 40px;
+}
+nav ul li a {
+  position: relative;
+  padding-bottom: 8px;
+  color: #000000;
+}
+nav ul li a:before, nav ul li a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  background-color: #4434FF;
+}
+nav ul li a:before {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+}
+nav ul li a:after {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+nav ul li a:hover:before, nav ul li a:hover:after, nav ul li a:focus:before, nav ul li a:focus:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav ul li a:hover:before, nav ul li a:focus:before {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+nav ul li a:hover:after, nav ul li a:focus:after {
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+}
+nav .button {
+  margin-left: auto;
+  margin-right: 80px;
+}
+
+header {
+  position: relative;
+}
+header h1 {
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15.9rem;
+  text-transform: uppercase;
+  line-height: 13.3rem;
+}
+header h1 .headline__second {
+  display: block;
+  color: #4434FF;
+}
+header .header__copy {
+  font-family: Open Sans, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 4.9rem;
+  max-width: 733px;
+  padding-bottom: 30px;
+}
+header:after {
+  background-image: url("../assets/hero.png");
+  position: absolute;
+  top: -200px;
+  bottom: 0;
+  content: "";
+  right: 0;
+  width: 1300px;
+  height: 1300px;
+  z-index: -1;
+}
+
+.button {
+  transition: 250ms;
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  outline: none;
+  color: #000000;
+  cursor: pointer;
+  background-color: #01FCB1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.button:hover span:after {
+  margin-left: 30px;
+  margin-right: -15px;
+}
+.button span {
+  color: #000000;
+}
+.button span:after {
+  transition: 250ms;
+  background-image: url("../assets/icons/arrow_black.svg");
+  content: "";
+  background-repeat: no-repeat;
+  width: 18px;
+  /*or your image's width*/
+  height: 18px;
+  /*or your image's height*/
+  margin-left: 15px;
+  display: inline-block;
+}
+.button--secondary {
+  background-color: #4434FF;
+}
+.button--secondary span {
+  color: #ffffff;
+}
+.button--secondary span:after {
+  background-image: url("../assets/icons/arrow_white.svg");
+}
 
 /*# sourceMappingURL=styles.css.map */

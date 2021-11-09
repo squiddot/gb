@@ -1,0 +1,146 @@
+@use 'sass:math';
+// Mixin to convert tracking to letter spacing
+@mixin tracking($tracking)
+{
+  letter-spacing: math.div($tracking, 1000) * 1em;
+}
+
+// Mixin to quickly set transition with just @include animate;
+@mixin animate($speed: $transition-speed)
+{
+  transition: $speed;
+}
+
+@mixin list
+{
+  li
+  {
+    position: relative;
+    &:before
+    {
+      position: absolute;
+      top: 0;
+      left: -2.4rem;
+
+      width: 2.4rem;
+    }
+  }
+}
+
+@mixin unordered-list
+{
+  @include list;
+
+  li
+  {
+    &:before
+    {
+      content: $bull;
+    }
+  }
+}
+
+@mixin ordered-list
+{
+  @include list;
+
+  list-style: none;
+
+  counter-reset: listCounter;
+
+  li
+  {
+    counter-increment: listCounter;
+    &:before
+    {
+      content: counter(listCounter) '.';
+    }
+  }
+}
+
+@mixin button
+{
+  @include t-button;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  color: $black;
+
+  cursor: pointer;
+}
+
+@mixin link-line
+{
+  $duration: 0.2s;
+  $distance: 8px;
+  $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+  position: relative;
+
+  padding-bottom: 8px;
+
+  color: $black;
+
+  &:before,
+  &:after
+  {
+    content: '';
+
+    position: absolute;right: 0;
+    bottom: 2px;
+    left: 0;
+
+    height: 2px;
+
+    background-color: $purple;
+  }
+  &:before
+  {
+    opacity: 0;
+
+    transform: translateY(- $distance);
+
+    transition: transform 0s $easeOutBack, opacity 0s;
+  }
+  &:after
+  {
+    opacity: 0;
+
+    transform: translateY($distance/2);
+
+    transition: transform $duration $easeOutBack, opacity $duration;
+  }
+  &:hover,
+  &:focus
+  {
+    &:before,
+    &:after
+    {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+    &:before
+    {
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:after
+    {
+      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+  }
+}
+
+@mixin last-row($columns)
+{
+  &:nth-child(#{$columns}n+1):nth-last-child(-n+#{$columns}),
+  &:nth-child(#{$columns}n+1):nth-last-child(-n+#{$columns}) ~ *
+  {
+    @content;
+  }
+}

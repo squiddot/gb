@@ -1,0 +1,26 @@
+header {
+  position: relative;
+  h1{
+    @include t-level-1;
+    .headline__second{
+      display: block;
+      color: $purple;
+    }
+  }
+  .header__copy{
+    @include t-copy;
+    max-width: 733px;
+    padding-bottom: 30px;
+  }
+  &:after{
+    background-image: url("../assets/hero.png");
+    position: absolute;
+    top:-200px;
+    bottom: 0;
+    content: '';
+    right: 0;
+    width: 1300px;
+    height: 1300px;
+    z-index: -1;
+  }
+}

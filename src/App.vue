@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Nav></Nav>
-    <Banner></Banner>
+    <div class="top">
+      <Nav></Nav>
+      <Banner></Banner>
+    </div>
     <LinkCards></LinkCards>
   </div>
 </template>
@@ -22,13 +24,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Saira+Condensed:wght@700;900&display=swap');
 </style>

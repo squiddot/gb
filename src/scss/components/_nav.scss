@@ -1,0 +1,24 @@
+nav {
+  img{
+    width: 74px;
+    height: 74px;
+  }
+  display: flex;
+  align-items: center;
+  ul{
+    @include t-nav;
+    display: flex;
+    li{
+      padding-left: 40px;
+      a{
+        @include link-line;
+      }
+    }
+  }
+  padding-bottom: 80px;
+  padding-top: 32px;
+  .button{
+    margin-left: auto;
+    margin-right: 80px;
+  }
+}

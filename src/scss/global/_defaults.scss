@@ -1,0 +1,171 @@
+html
+{
+  box-sizing: border-box;
+
+  background-color: $black;
+  color: $white;
+  //browser font size hack for accessibility to make rem multiple of 10's eg. 1rem = 10px
+
+  font-size: 62.5%;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+.top{
+  height: 100vh;
+}
+
+b,
+strong
+{
+  font-weight: 600;
+}
+
+picture
+{
+  display: block;
+
+  line-height: 0;
+}
+
+img
+{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+figure
+{
+  canvas
+  {
+    max-width: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  span
+  {
+    color: $white;
+  }
+}
+
+a
+{
+  text-decoration: none;
+
+  &.no-pointer
+  {
+    cursor: initial;
+  }
+  &:visited{
+    color: $white;
+  }
+
+  //&:not(.button)
+  //{
+  //  p &,
+  //  .accordion li &
+  //  {
+  //    @include animate;
+  //
+  //    border-bottom: 1px dotted $black;
+  //
+  //    color: $black;
+  //    &:hover
+  //    {
+  //      border-bottom-color: $purple;
+  //
+  //      color: $purple;
+  //    }
+  //  }
+  //}
+}
+
+figure
+{
+  margin: 0;
+
+  &.border
+  {
+    img
+    {
+      box-sizing: border-box;
+    }
+  }
+}
+
+video
+{
+  max-width: 100%;
+}
+
+::selection
+{
+  background: $purple;
+  color: $white;
+}
+
+ul,
+ol
+{
+  margin: 0;
+  padding-left: 0;
+  li
+  {
+    box-sizing: border-box;
+  }
+}
+
+ul
+{
+  list-style: none;
+}
+
+input
+{
+  box-sizing: border-box;
+
+  &:focus
+  {
+    outline: none;
+  }
+}
+
+dd
+{
+  margin-left: 0;
+}
+
+sup
+{
+  top: -0.3em;
+}
+
+#app{
+  //I would probably put this in a different spot with a craft site.
+  margin-left: 322px;
+}

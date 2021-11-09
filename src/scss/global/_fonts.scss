@@ -1,0 +1,58 @@
+$ff-open-sans: Open Sans, sans-serif;
+$ff-saira-condensed: Saira Condensed, sans-serif;
+
+@font-face {
+  font:
+  {
+    family: $ff-open-sans, sans-serif;
+    style: normal;
+    weight: 400;
+  }
+}
+
+@font-face {
+  font:
+  {
+    family: $ff-saira-condensed, sans-serif;
+    style: normal;
+    weight: 700;
+  }
+}
+
+@font-face {
+  font:
+  {
+    family: $ff-saira-condensed, sans-serif;
+    style: normal;
+    weight: 900;
+  }
+}
+
+@mixin open-sans
+{
+  font:
+  {
+    family: $ff-open-sans, sans-serif;
+    style: normal;
+    weight: 400;
+  }
+}
+
+@mixin saira-condensed-bold
+{
+  font:
+  {
+    family: $ff-saira-condensed, sans-serif;
+    style: normal;
+    weight: 700;
+  }
+}
+@mixin saira-condensed-black
+{
+  font:
+  {
+    family: $ff-saira-condensed, sans-serif;
+    style: normal;
+    weight: 900;
+  }
+}

@@ -7,7 +7,7 @@
       <li><a href="#">Services</a></li>
       <li><a href="#">About</a></li>
     </ul>
-    <a href="#" class="button--secondary"><span>Contact Us</span></a>
+    <a href="#" class="button button--secondary"><span>Contact Us</span></a>
   </nav>
 </template>
 
