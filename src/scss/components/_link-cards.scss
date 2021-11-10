@@ -1,0 +1,55 @@
+.link-cards{
+  padding-top: 165px;
+  h1{
+    @include t-level-2;
+    .headline__second{
+      display: block;
+      color: $purple;
+    }
+  }
+  ul{
+    margin-top: 80px;
+    display: flex;
+    li{
+      @include animate;
+      flex-grow: 1;
+      position: relative;
+      &:hover{
+        .bgimage{
+          background-color: $grey;
+        }
+      }
+      a{
+        padding: 50px;
+        display: flex;
+        //height: 100%;
+        flex-direction: column;
+        //background-size: cover;
+
+        .bgimage{
+          position: absolute;
+          @include animate;
+          z-index: -1;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          height: 600px;
+          overflow: hidden;
+        }
+        h2{
+          margin-top: 325px;
+          @include t-level-3;
+        }
+      }
+    }
+  }
+  .link-card{
+    .icon{
+      height: 50px;
+      width: 50px;
+      background-color: $teal;
+      padding: 30px;
+    }
+
+  }
+}

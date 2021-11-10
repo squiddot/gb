@@ -25,6 +25,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
 }
+html body {
+  margin: 0;
+}
 
 .top {
   height: 100vh;
@@ -247,6 +250,7 @@ header .header__video-lightbox .teaser-content {
 }
 header .header__video-lightbox .teaser-content a {
   display: flex;
+  align-items: center;
 }
 header .header__video-lightbox .teaser-content a img {
   margin-right: 15px;
@@ -268,6 +272,64 @@ header .header__video-lightbox a {
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 3.1rem;
+}
+
+.link-cards {
+  padding-top: 165px;
+}
+.link-cards h1 {
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 11.5rem;
+  text-transform: uppercase;
+  line-height: 10rem;
+}
+.link-cards h1 .headline__second {
+  display: block;
+  color: #4434FF;
+}
+.link-cards ul {
+  margin-top: 80px;
+  display: flex;
+}
+.link-cards ul li {
+  transition: 250ms;
+  flex-grow: 1;
+  position: relative;
+}
+.link-cards ul li:hover .bgimage {
+  background-color: #97A3AE;
+}
+.link-cards ul li a {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.link-cards ul li a .bgimage {
+  position: absolute;
+  transition: 250ms;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 600px;
+  overflow: hidden;
+}
+.link-cards ul li a h2 {
+  margin-top: 325px;
+  font-family: Saira Condensed, sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.9rem;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+}
+.link-cards .link-card .icon {
+  height: 50px;
+  width: 50px;
+  background-color: #01FCB1;
+  padding: 30px;
 }
 
 .button {
